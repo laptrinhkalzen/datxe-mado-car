@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend\CarManufacturer;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

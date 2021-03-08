@@ -39,20 +39,20 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::delete('/attribute/delete/{id}', ['as' => 'admin.attribute.destroy', 'uses' => 'Backend\AttributeController@destroy']);
 
     // Lái xe
-    Route::get('/drive', ['as' => 'admin.drive.index', 'uses' => 'Backend\DriveController@index']);
-    Route::get('/drive/create', ['as' => 'admin.drive.create', 'uses' => 'Backend\DriveController@create']);
-    Route::post('/drive/store', ['as' => 'admin.drive.store', 'uses' => 'Backend\DriveController@store']);
-    Route::get('/drive/edit/{id}', ['as' => 'admin.drive.edit', 'uses' => 'Backend\DriveController@edit']);
-    Route::post('/drive/update/{id}', ['as' => 'admin.drive.update', 'uses' => 'Backend\DriveController@update']);
-    Route::delete('/drive/delete/{id}', ['as' => 'admin.drive.destroy', 'uses' => 'Backend\DriveController@destroy']);
+    Route::get('/drive', ['as' => 'admin.drive.index', 'uses' => 'Backend\CarManufacturer\DriveController@index']);
+    Route::get('/drive/create', ['as' => 'admin.drive.create', 'uses' => 'Backend\CarManufacturer\DriveController@create']);
+    Route::post('/drive/store', ['as' => 'admin.drive.store', 'uses' => 'Backend\CarManufacturer\DriveController@store']);
+    Route::get('/drive/edit/{id}', ['as' => 'admin.drive.edit', 'uses' => 'Backend\CarManufacturer\DriveController@edit']);
+    Route::post('/drive/update/{id}', ['as' => 'admin.drive.update', 'uses' => 'Backend\CarManufacturer\DriveController@update']);
+    Route::delete('/drive/delete/{id}', ['as' => 'admin.drive.destroy', 'uses' => 'Backend\CarManufacturer\DriveController@destroy']);
 
     //Chuyên gia
-    Route::get('/expert', ['as' => 'admin.expert.index', 'uses' => 'Backend\ExpertController@index']);
-    Route::get('/expert/create', ['as' => 'admin.expert.create', 'uses' => 'Backend\ExpertController@create']);
-    Route::post('/expert/store', ['as' => 'admin.expert.store', 'uses' => 'Backend\ExpertController@store']);
-    Route::get('/expert/edit/{id}', ['as' => 'admin.expert.edit', 'uses' => 'Backend\ExpertController@edit']);
-    Route::post('/expert/update/{id}', ['as' => 'admin.expert.update', 'uses' => 'Backend\ExpertController@update']);
-    Route::delete('/expert/delete/{id}', ['as' => 'admin.expert.destroy', 'uses' => 'Backend\ExpertController@destroy']);
+    Route::get('/expert', ['as' => 'admin.expert.index', 'uses' => 'Backend\Company\ExpertController@index']);
+    Route::get('/expert/create', ['as' => 'admin.expert.create', 'uses' => 'Backend\Company\ExpertController@create']);
+    Route::post('/expert/store', ['as' => 'admin.expert.store', 'uses' => 'Backend\Company\ExpertController@store']);
+    Route::get('/expert/edit/{id}', ['as' => 'admin.expert.edit', 'uses' => 'Backend\Company\ExpertController@edit']);
+    Route::post('/expert/update/{id}', ['as' => 'admin.expert.update', 'uses' => 'Backend\Company\ExpertController@update']);
+    Route::delete('/expert/delete/{id}', ['as' => 'admin.expert.destroy', 'uses' => 'Backend\Company\ExpertController@destroy']);
 
 
     //Hãng xe

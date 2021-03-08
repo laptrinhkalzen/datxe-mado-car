@@ -77,29 +77,53 @@
                 </li>
                 @endif
                 <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Thành viên</span></a>
+                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Quản lý hãng cung cấp dịch vụ vận tải</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm"> 
+                        <li class="nav-item"><a href="{{route('admin.manufacturer.index')}}" class="nav-link">Quản lý hãng </a></li> 
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Quản lý công ty sử dụng dịch vụ vận tải</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm"> 
+                        <li class="nav-item"><a href="" class="nav-link">Quản lý công ty</a></li> 
+                    </ul>
+                </li>
+                
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Quản lý chuyên gia</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Khách hàng">
-                        <li class="nav-item"><a href="{{route('admin.drive.index')}}" class="nav-link">Tài xế</a></li>
+                        
                         <li class="nav-item"><a href="{{route('admin.expert.index')}}" class="nav-link">Chuyên gia</a></li>
                        
                         
                     </ul>
                 </li>
-                
-                
                 <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Quản lý hãng xe</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm"> 
-                        <li class="nav-item"><a href="{{route('admin.manufacturer.index')}}" class="nav-link">Quản lý hãng xe</a></li> 
+                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Quản lý tài xế</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Khách hàng">
+                        <li class="nav-item"><a href="{{route('admin.drive.index')}}" class="nav-link">Tài xế</a></li>
+                            
                     </ul>
                 </li>
-
-                <li class="nav-item nav-item-submenu">
+                <!-- <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Quản lý xe</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm">
                         <li class="nav-item"><a href="{{route('admin.category.index',\App\Category::TYPE_CAR)}}" class="nav-link">Hãng xe</a></li>
                         <li class="nav-item"><a href="{{route('admin.car.index')}}" class="nav-link">Xe</a></li>
                         <li class="nav-item"><a href="{{route('admin.attribute.index')}}" class="nav-link">Thuộc tính</a></li>
+                    </ul>
+                </li> -->
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-newspaper"></i> <span>Thống kê</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Khách hàng">
+                        <li class="nav-item"><a href="" class="nav-link">Thống kê số lượng chuyên gia theo từng hãng cung cấp dịch vụ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Thống kê số lượng chuyên gia theo từng công ty sử dụng dịch vụ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Thống kê doanh thu theo từng hãng cung cấp dịch vụ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Thống kê doanh thu theo từng công ty sử dụng dịch vụ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Thống kê lịch sử chuyến đi</a></li>
+
+
+                            
                     </ul>
                 </li>
           
