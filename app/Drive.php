@@ -10,7 +10,7 @@ class Drive extends Model {
 
     protected $table = 'driver';
     protected $fillable = [
-        'name','phone', 'address','image', 'birthday', 'status', 'sex','email'
+        'name','phone', 'address','image', 'birthday', 'status', 'sex','email', 'manufacturer_id','point','country','id_card'
     ];
 
     public function categories() {
