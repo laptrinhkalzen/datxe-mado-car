@@ -21,13 +21,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::post('/category/{type}/update/{id}', ['as' => 'admin.category.update', 'uses' => 'Backend\CategoryController@update']);
     Route::delete('/category/{type}/delete/{id}', ['as' => 'admin.category.destroy', 'uses' => 'Backend\CategoryController@destroy']);
 
-    /* Quản lý news */
-    Route::get('/news', ['as' => 'admin.news.index', 'uses' => 'Backend\NewsController@index']);
-    Route::get('/news/create', ['as' => 'admin.news.create', 'uses' => 'Backend\NewsController@create']);
-    Route::post('/news/store', ['as' => 'admin.news.store', 'uses' => 'Backend\NewsController@store']);
-    Route::get('/news/edit/{id}', ['as' => 'admin.news.edit', 'uses' => 'Backend\NewsController@edit']);
-    Route::post('/news/update/{id}', ['as' => 'admin.news.update', 'uses' => 'Backend\NewsController@update']);
-    Route::delete('/news/delete/{id}', ['as' => 'admin.news.destroy', 'uses' => 'Backend\NewsController@destroy']);
 
     /* Quản lý car */
     Route::get('/car', ['as' => 'admin.car.index', 'uses' => 'Backend\CarController@index']);
