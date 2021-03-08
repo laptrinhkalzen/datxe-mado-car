@@ -4,7 +4,7 @@
 <div class="content">
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h5 class="card-title">Lái xe</h5>
+            <h5 class="card-title">Hãng xe</h5>
             <div class="header-elements">
                 <div class="list-icons">
                     <a class="list-icons-item" data-action="collapse"></a>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="card-body">
-            <form action="{!!route('admin.drive.store')!!}" method="POST" enctype="multipart/form-data">
+            <form action="{!!route('admin.manufacturer.store')!!}" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
                 <div class="panel panel-body results">
                     <div class="row">
@@ -24,13 +24,13 @@
                                 <legend class="text-semibold"><i class="icon-reading position-left"></i> Tạo mới</legend>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="required">Họ tên</label>
+                                        <label class="required">Tên hãng</label>
                                         <input name="name" type="text" class="form-control" value="{!!old('name')!!}">
                                         {!! $errors->first('name', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label class="required">Số điện thoại</label>
-                                        <input name="phone" type="number" class="form-control" value="{!!old('phone')!!}">
+                                        <input name="mobile" type="number" class="form-control" value="{!!old('phone')!!}">
                                         {!! $errors->first('phone', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                 </div>
@@ -40,21 +40,24 @@
                                         <input name="address" type="text" class="form-control" value="{!!old('address')!!}">
                                         {!! $errors->first('address', '<span class="text-danger">:message</span>') !!}
                                     </div>
-                                     
+                                    <div class="form-group col-md-6">
+                                        <label class="required">Mã số thuế</label>
+                                        <input name="tax_code" type="text" class="form-control" value="{!!old('tax_code')!!}">
+                                        {!! $errors->first('tax_code', '<span class="text-danger">:message</span>') !!}
+                                    </div>
+                                  
                                 </div>
 
                                   <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="required">Ngày sinh</label>
-                                        <input name="birthday" type="date" class="form-control" value="{!!old('birthday')!!}">
-                                        {!! $errors->first('birthday', '<span class="text-danger">:message</span>') !!}
+                                        <label class="required">Người liên hệ</label>
+                                        <input name="contacter" type="text" class="form-control" value="{!!old('contacter')!!}">
+                                        {!! $errors->first('contacter', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="required">Giới tính</label>
-                                        <select name="sex" class="form-control">
-                                            <option value="1">Nam</option>
-                                            <option value="2">Nữ</option>
-                                        </select>
+                                        <label class="required">Số điện thoại liên hệ</label>
+                                        <input name="contacter_mobile" type="text" class="form-control" value="{!!old('contacter_mobile')!!}">
+                                        {!! $errors->first('contacter_mobile', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                 </div>
                                  <div class="row">
@@ -62,22 +65,9 @@
                                         <label class="required">Email</label>
                                         <input name="email" type="email" class="form-control" value="{!!old('email')!!}">
                                         {!! $errors->first('email', '<span class="text-danger">:message</span>') !!}
-                                    </div>
-                                     <div class="form-group col-md-6">
-                                        <label class="required">Số căn cước</label>
-                                        <input name="id_card" type="text" class="form-control" value="{!!old('id_card')!!}">
-                                        {!! $errors->first('id_card', '<span class="text-danger">:message</span>') !!}
-                                    </div>
+                                    </div> 
                                 </div>
-                                <div class="row">
-
-                                    <div class="form-group col-md-6">
-                                        <label class="required">Ảnh chân dung</label>
-                                        <input name="image" type="file" class="form-control" value="{!!old('image')!!}">
-                                        {!! $errors->first('image', '<span class="text-danger">:message</span>') !!}
-                                    </div>
-                                </div>
-                                 <div class="form-group row">
+                                <div class="form-group row">
                                     <div class="form-check col-md-6 form-check-right">
                                         <label class="form-check-label float-right">
                                             Hiển thị
