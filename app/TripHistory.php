@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model {
+class PostHistory extends Model {
 
     //
-    protected $table = "tag";
+    protected $table = "trip_history";
     protected $fillable = [
-        'title', 'gallery_id', 'image', 'position_x', 'position_y'
+        'item_id', 'module', 'created_at', 'updated_at'
     ];
     public $timestamps = false;
 }
