@@ -123,7 +123,7 @@
                         <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
                         <li class="nav-item"><a href="{{route('admin.service.index')}}" class="nav-link">Dịch vụ</a></li>
                         <li class="nav-item"><a href="{{route('admin.block.index')}}" class="nav-link">Khối</a></li>
-                        <li class="nav-item"><a href="{{route('admin.template_setting.index')}}" class="nav-link">Tùy chỉnh giao diện</a></li>
+                        
                     </ul>
                 </li>
                 <li class="nav-item nav-item-submenu">

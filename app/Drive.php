@@ -8,7 +8,7 @@ class Drive extends Model {
 
 
 
-    protected $table = 'drive';
+    protected $table = 'driver';
     protected $fillable = [
         'name','phone', 'address','image', 'birthday', 'status', 'sex','email'
     ];

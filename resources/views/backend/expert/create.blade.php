@@ -4,7 +4,7 @@
 <div class="content">
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h5 class="card-title">Lái xe</h5>
+            <h5 class="card-title">Chuyên gia</h5>
             <div class="header-elements">
                 <div class="list-icons">
                     <a class="list-icons-item" data-action="collapse"></a>
@@ -29,14 +29,14 @@
                                         {!! $errors->first('name', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="required">Số điện thoại</label>
-                                        <input name="phone" type="number" class="form-control" value="{!!old('phone')!!}">
-                                        {!! $errors->first('phone', '<span class="text-danger">:message</span>') !!}
+                                        <label class="required">Tên công ty</label>
+                                        <input name="company_id" type="text" class="form-control" value="{!!old('company_id')!!}">
+                                        {!! $errors->first('company_id', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="required">Address</label>
+                                        <label class="required">Địa chỉ</label>
                                         <input name="address" type="text" class="form-control" value="{!!old('address')!!}">
                                         {!! $errors->first('address', '<span class="text-danger">:message</span>') !!}
                                     </div>
@@ -73,8 +73,24 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                         <label class="required">Ảnh chân dung</label>
-                                        <input name="image" type="file" class="form-control" value="{!!old('image')!!}">
-                                        {!! $errors->first('image', '<span class="text-danger">:message</span>') !!}
+                                        <input name="images" type="file" class="form-control" value="{!!old('images')!!}">
+                                        {!! $errors->first('images', '<span class="text-danger">:message</span>') !!}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                     
+                                    <div class="form-group col-md-6">
+                                        <label class="required">Số điện thoại</label>
+                                        <input name="mobile" type="number" class="form-control" value="{!!old('mobile')!!}">
+                                        {!! $errors->first('mobile', '<span class="text-danger">:message</span>') !!}
+                                    </div>
+                                        <div class="form-group col-md-6">
+                                        <label class="required">Hình thức thanh toán</label>
+                                        <select name="payment_type" class="form-control">
+                                            <option value="1">Tiền mặt</option>
+                                            <option value="2">Thẻ</option>
+                                        </select>
+                                        {!! $errors->first('phone', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                 </div>
                               

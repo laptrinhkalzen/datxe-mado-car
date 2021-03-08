@@ -8,7 +8,7 @@ class Car extends Model {
 
     protected $table = 'car';
     protected $fillable = [
-        'created_by', 'content','images', 'title','number_plate', 'status', 'alias', 'ordering', 'post_schedule'
+        'number_plate', 'manufacturer_id','type', 'color','seat_number', 'origin', 'driver_id'
     ];
 
     public function attributes() {

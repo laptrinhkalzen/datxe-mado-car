@@ -41,7 +41,7 @@
                 @foreach($records as $key=>$record)
                 <tr>
                     <td>{{++$key}}</td>
-                    <td><img class="img-responsive" style="width: 100px; height: 100px;" src="{{asset($record->image)}}"></td>
+                    <td><img class="img-responsive" style="width: 100px; height: 100px;" src="{{asset($record->images)}}"></td>
                     <td>{{$record->name}}</td>
                     <td>{{$record->address}}</td>
                     <td>{{$record->email}}</td>
