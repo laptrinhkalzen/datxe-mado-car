@@ -11,6 +11,6 @@ class NewsCategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\NewsCategory::class, 200)->create();
     }
 }

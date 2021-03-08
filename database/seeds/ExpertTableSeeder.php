@@ -11,6 +11,6 @@ class ExpertTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Expert::class, 200)->create();
     }
 }

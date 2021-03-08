@@ -8,16 +8,13 @@ class Review extends Model {
 
     protected $table = "review";
     protected $fillable =[
-        'star', 'construction_id', 'review_person_id', 'content'
+        'trip_id', 'user', 'content','type'
     ];
 
-    public function construction() {
-        return $this->belongsTo('\App\Construction');
+    public function trip() {
+        return $this->belongsTo('\App\Trip');
     }
 
-    public function review_person() {
-        return $this->belongsTo('\App\ReviewPerson', 'review_person_id', 'facebook_id');
-    }
 
     public function created_at() {
         return date('d/m/Y', strtotime($this->created_at));

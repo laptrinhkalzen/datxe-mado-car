@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model {
+class Payment extends Model {
 
     protected $table = 'payment';
     protected $fillable = ['trip_id', 'type', 'cost'];

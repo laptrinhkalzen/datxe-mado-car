@@ -11,6 +11,6 @@ class ManufacturerTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Manufacturer::class, 200)->create();
     }
 }

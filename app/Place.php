@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model {
+class Place extends Model {
 
     protected $table = 'place';
     protected $fillable = ['user_id', 'name', 'position'];
