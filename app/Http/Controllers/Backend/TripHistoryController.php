@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class PostHistoryController extends Controller
+class TripHistoryController extends Controller
 {
     //
 }
