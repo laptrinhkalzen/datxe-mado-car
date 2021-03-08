@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Repositories\CategoryRepository;
 use Illuminate\Database\Eloquent\Model;
-
 use DB;
 use App\Drive;
+use App\Attribute;
+use App\Manufacturer;
+use Carbon\Carbon;
 
 class DriveController  extends Controller
 {
@@ -31,23 +33,23 @@ class DriveController  extends Controller
 
     public function create()
     {   
-      
-        $options = $this->categoryRepo->readCategoryByType(\App\Category::TYPE_CAR);
-        $category_html = \App\Helpers\StringHelper::getSelectRoleOptions($options);
-        return view('backend/drive/create',compact('category_html'));
+        $countries=DB::table('country')->get();
+        $manufacturer = Manufacturer::get();
+        $manufacturer_html = \App\Helpers\StringHelper::getSelectRoleOptions($manufacturer);
+        return view('backend/drive/create',compact('manufacturer_html','countries'));
     }
 
     public function store(Request $request) {
-         
-        $input= new Drive();
-        $data = $request->all();
-       
-        // $validator = \Validator::make($input, $this->carRepo->validateCreate());
+        $input = new Drive();
+        $data = $request->except(['_token']);
+        // $validator = \Validator::make($data, $input->validateCreate());
         // if ($validator->fails()) {
         //     return redirect()->back()->withErrors($validator)->withInput();
         // }
-
-        $data['created_by'] = \Auth::user()->id;
+        $data['status'] = isset($input['status']) ? 1 : 0;
+        $data['manufacturer_id'] = $request->manufacturer_id;
+        $data['country_id'] = $request->manufacturer_id;
+        $data['created_at'] = Carbon::now('Asia/Ho_Chi_Minh');
         $get_image=$request->image;
         if($get_image){
             $get_name_image = $get_image->getClientOriginalName();
@@ -56,12 +58,8 @@ class DriveController  extends Controller
             $get_image->move('/image/',$new_image);
             $data['image'] = 'public/image/'.$new_image;
         }
-        $drive=$input->create($data);
-        //Thêm vào lịch sử đăng bài
-        //$this->addPostHistory($car);
-        //Thêm danh mục sản phẩm
-        $drive->categories()->attach($data['category_id']);
-        //Thêm thuộc tính sản phẩm
+        $drive=$input->insert($data);   
+       //dd($drive);
         if ($drive) {
             return redirect()->route('admin.drive.index')->with('success', 'Tạo mới thành công');
         } else {
@@ -71,12 +69,9 @@ class DriveController  extends Controller
 
     public function edit($id) {
         $record = Drive::find($id);
-        $options = DB::table('category')->where('type',4)->get();
-        $category_ids = $record->categories()->get()->pluck('id')->toArray();
-        $category_html = \App\Helpers\StringHelper::getSelectRoleOptions($options, $category_ids);
-        //Lấy danh sách id thuộc tính của sản phẩm
-        //Lấy danh sách thuộc tính cúa sản phẩm
-        return view('backend/drive/edit', compact('record', 'category_html'));
+        $manufacturer = Manufacturer::get();
+        $manufacturer_html = \App\Helpers\StringHelper::getSelectRoleOptions($manufacturer);
+        return view('backend/drive/edit', compact(' $manufacturer', 'manufacturer_html'));
     }
 
     /**

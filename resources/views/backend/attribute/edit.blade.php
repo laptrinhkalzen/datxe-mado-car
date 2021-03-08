@@ -48,8 +48,8 @@
                                 <label class="col-md-3 col-form-label text-right">Loại thuộc tính <span class="text-danger">*</span></label>
                                 <div class="col-md-9">
                                     <select class="form-control select-search"  data-fouc name="module" required="">
-                                        <option value="product" @if ($record->module == 'product') selected @endif>Sản phẩm</option>
-                                        <option value="gallery" @if ($record->module == 'gallery') selected @endif>Hình ảnh</option>
+                                        <option value="product" @if ($record->module == 'product') selected @endif>Xe</option>
+                                       
                                     </select>
                                 </div>
                             </div>

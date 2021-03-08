@@ -93,21 +93,13 @@
                     </ul>
                 </li>
                 
-                
-               <!--  <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-video-camera"></i> <span>Video</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
-                        <li class="nav-item"><a href="{{route('admin.category.index', \App\Category::TYPE_VIDEO)}}" class="nav-link">Danh mục</a></li>
-                        <li class="nav-item"><a href="{{route('admin.video.index')}}" class="nav-link">Video</a></li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Quản lý hãng xe</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm"> 
+                        <li class="nav-item"><a href="{{route('admin.manufacturer.index')}}" class="nav-link">Quản lý hãng xe</a></li> 
                     </ul>
                 </li>
-                <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-camera"></i> <span>Hình ảnh</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
-                        <li class="nav-item"><a href="{{route('admin.category.index', \App\Category::TYPE_GALLERY)}}" class="nav-link">Danh mục</a></li>
-                        <li class="nav-item"><a href="{{route('admin.gallery.index')}}" class="nav-link">Hình ảnh</a></li>
-                    </ul>
-                </li> -->
+
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Quản lý xe</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm">
@@ -116,44 +108,7 @@
                         <li class="nav-item"><a href="{{route('admin.attribute.index')}}" class="nav-link">Thuộc tính</a></li>
                     </ul>
                 </li>
-              <!--   <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Giao diện</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
-                        <li class="nav-item"><a href="{{route('admin.slide.index')}}" class="nav-link">Slide</a></li>
-                        <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
-                        <li class="nav-item"><a href="{{route('admin.service.index')}}" class="nav-link">Dịch vụ</a></li>
-                        <li class="nav-item"><a href="{{route('admin.block.index')}}" class="nav-link">Khối</a></li>
-                        
-                    </ul>
-                </li>
-                <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-bucket"></i> <span>Thi công</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Thi công">
-                        <li class="nav-item"><a href="{{route('admin.construction.index')}}" class="nav-link">Đơn vị thi công</a></li>
-                        <li class="nav-item"><a href="{{route('admin.category.index', \App\Category::TYPE_CONSTRUCTION)}}" class="nav-link">Danh mục</a></li>
-                        <li class="nav-item"><a href="{{route('admin.item.index')}}" class="nav-link">Hạng mục</a></li>
-                        <li class="nav-item"><a href="{{route('admin.project.index')}}" class="nav-link">Dự án</a></li>
-                        <li class="nav-item"><a href="{{route('admin.review.index')}}" class="nav-link">Đánh giá</a></li>
-                    </ul>
-                </li> -->
-                  
-          <!--       <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Khách hàng</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Khách hàng">
-                        <li class="nav-item"><a href="{{route('admin.subscriber.index')}}" class="nav-link">Người đăng kí</a></li>
-                        <li class="nav-item"><a href="{{route('admin.contact.index')}}" class="nav-link">Liên hệ</a></li>
-                        <li class="nav-item"><a href="{{route('admin.member.index')}}" class="nav-link">Thành viên</a></li>
-                        <li class="nav-item"><a href="{{route('admin.order.index')}}" class="nav-link">Đơn hàng</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Tiếp thị liên kết</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
-                        <li class="nav-item"><a href="{{route('admin.marketing.index')}}" class="nav-link">Tài khoản</a></li>
-                        <li class="nav-item"><a href="{{route('admin.rank.index')}}" class="nav-link">Danh mục cấp bậc</a></li>
-                    </ul>
-                </li> -->
-            
+          
 
 
             </ul>

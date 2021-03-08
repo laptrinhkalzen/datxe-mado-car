@@ -48,8 +48,7 @@
                                 <label class="col-md-3 col-form-label text-right">Loại thuộc tính <span class="text-danger">*</span></label>
                                 <div class="col-md-9">
                                     <select class="form-control select-search"  data-fouc name="module" required="">
-                                        <option value="product">Sản phẩm</option>
-                                        <option value="gallery">Hình ảnh</option>
+                                        <option value="product">Xe</option>
                                     </select>
                                 </div>
                             </div>
