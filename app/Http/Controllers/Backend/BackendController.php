@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Repositories\CarRepository;
-use Repositories\NewsRepository;
+
 use App\Repositories\ContactRepository;
 use Repositories\ConfigRepository;
 
@@ -22,9 +22,9 @@ class BackendController  extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(CarRepository $carRepo, NewsRepository $newRepo, ContactRepository $contactRepo, \Repositories\ConfigRepository $configRepo) {
+    public function __construct(CarRepository $carRepo, ContactRepository $contactRepo, \Repositories\ConfigRepository $configRepo) {
         $this->carRepo = $carRepo;
-        $this->newsRepo = $newRepo;
+        
         $this->contactRepo = $contactRepo;
         $this->configRepo = $configRepo;
     }

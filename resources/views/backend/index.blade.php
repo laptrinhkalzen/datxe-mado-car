@@ -15,7 +15,7 @@
             </a>
         </div>
         <div class="col-sm-4">
-            <a href="{{route('admin.news.index')}}">
+            <a >
                 <div class="tile-stats tile-aqua"> 
                     <div class="icon"><i class="icon-newspaper"></i>
                     </div> 
