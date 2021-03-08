@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Repositories\UserRepository;
 use Repositories\RoleRepository;
+use DB;
 
 class UserController extends Controller {
 
@@ -90,6 +91,14 @@ class UserController extends Controller {
         }
         $this->userRepo->update($input, $id);
         return redirect()->route('admin.user.edit', $id)->with('success', 'Update thành công');
+    }
+    public function resetPassword($id) {
+        $data = array();
+        $data['password'] = bcrypt('123456a@');
+        // $user=DB::table('user')->where('id',$id)->first();
+        // $user->password='123456a@';
+        DB::table('user')->where('id',$id)->update($data);
+        return redirect()->route('admin.user.index')->with('success', 'Reset mật khẩu thành công');
     }
 
     public function destroy($id) {

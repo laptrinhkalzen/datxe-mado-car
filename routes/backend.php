@@ -80,6 +80,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::delete('/user/delete/{id}', ['as' => 'admin.user.destroy', 'uses' => 'Backend\UserController@destroy']);
     Route::get('/user/edit_profile/{id}', ['as' => 'admin.user.index_profile', 'uses' => 'Backend\UserController@editProfile']);
     Route::post('/user/update_profile/{id}', ['as' => 'admin.user.update_profile', 'uses' => 'Backend\UserController@updateProfile']);
+    Route::get('/user/reset-password/{id}', ['as' => 'admin.user.reset_password', 'uses' => 'Backend\UserController@resetPassword']);
     
     /* Quản lý quyền */
     Route::get('/role', ['as' => 'admin.role.index', 'uses' => 'Backend\RoleController@index']);

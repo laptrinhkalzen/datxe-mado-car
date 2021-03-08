@@ -16,6 +16,12 @@
         </div>
 
         <div class="card-body">
+            @if (Session::has('success'))
+            <div class="alert bg-success alert-styled-left">
+                <button type="button" class="close" data-dismiss="alert"><span>×</span><span class="sr-only">Close</span></button>
+                <span class="text-semibold">{{ Session::get('success') }}</span>
+            </div>
+            @endif
             <!--The <code>DataTables</code> is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table. DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function. Searching, ordering, paging etc goodness will be immediately added to the table, as shown in this example. <strong>Datatables support all available table styling.</strong>-->
         </div>
 
@@ -39,7 +45,8 @@
                     <td>{{$record->role->title}}</td>
                     <td>{{$record->created_at()}}</td>
                     <td class="text-center">
-                        <a href="{{route('admin.user.edit', $record->id)}}" title="Chỉnh sửa" class="success"><i class="icon-pencil"></i></a>   
+                        <a href="{{route('admin.user.edit', $record->id)}}" title="Chỉnh sửa" class="success"><i class="icon-pencil"></i></a>
+                        <a href="{{route('admin.user.reset_password', $record->id)}}" title="Reset" class="success"><i class="icon-pencil"></i></a>   
                         <form action="{!! route('admin.user.destroy', $record->id) !!}" method="POST" style="display: inline-block">
                             {!! method_field('DELETE') !!}
                             {!! csrf_field() !!}
